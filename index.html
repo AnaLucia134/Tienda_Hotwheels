@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PICKUP 7/8 - Iniciar Sesión</title>
+    <link rel="stylesheet" href="styles1.css">
+    <link rel="shortcut icon" href="icono.png" type="image/x-icon">
+</head>
+<body>
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Inicia Sesión</button>
+                <button type="button" class="toggle-btn" onclick="registro()">Regístrate</button>
+            </div>
+            <div class="welcome">
+                <h1>¡Bienvenido a PICKUP 7/8!</h1>
+            </div>
+            <form id="login" action="login.php" class="input-group" method="POST">
+                <input type="text" name="username" id="" class="input-field" placeholder="Nombre de Usuario" required>
+                <input type="password" name="password" id="" class="input-field" placeholder="Contraseña" required>
+                <br>
+                <input type="checkbox" name="remember" id="" class="check-box"><span>Recordar Contraseña</span>
+                <br>
+                <button type="submit" class="submit-btn">Log In</button>
+            </form>
+            <form id="registro" action="registro.php" class="input-group" method="POST">
+                <input type="text" name="username" id="" class="input-field" placeholder="Nombre de Usuario" required>
+                <input type="email" name="email" id="" class="input-field" placeholder="Correo Electrónico" required>
+                <input type="password" name="password" id="" class="input-field" placeholder="Contraseña" required>
+                <br>
+                <input type="checkbox" name="accept_terms" id="" class="check-box"><span>Acepto todos los términos y condiciones</span>
+                <br>
+                <button type="submit" class="submit-btn">Registrar</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        var x = document.getElementById("login")
+        var y = document.getElementById("registro")
+        var z = document.getElementById("btn")
+        function registro()
+        {
+            x.style.left = "-400px"
+            y.style.left = "50px"
+            z.style.left = "110px"
+        }
+        function login()
+        {
+            x.style.left = "50px"
+            y.style.left = "450px"
+            z.style.left = "0"
+        }
+    </script>
+</body>
+</html>
